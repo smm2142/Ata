@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 body {
-  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
   min-height: 100vh;
   display: flex;
@@ -21,46 +21,61 @@ body {
   height: 150px;
   background: #ff4e50;
   margin: 0 auto;
-  position: relative;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: 0.4s;
 }
 .gift-box::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 20px;
-  background: #fff;
+  background: white;
   top: 0;
-  left: 0;
-  border-radius: 10px 10px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 .text {
   margin-top: 20px;
   font-size: 1.2rem;
-  animation: fadeIn 1s ease forwards;
 }
 .cards {
-  margin-top: 30px;
   display: none;
+  margin-top: 30px;
   flex-direction: column;
   gap: 20px;
 }
 .card {
-  background: #ffffff10;
+  background: #ffffff20;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(255,255,255,0.1);
-  font-size: 1rem;
-  backdrop-filter: blur(10px);
-  transition: transform 0.2s;
+  text-decoration: none;
+  color: white;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
 }
 .card:hover {
   transform: scale(1.05);
+  background: #ffffff30;
 }
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+.detail-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+.detail-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.back-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff4e50;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
 }
